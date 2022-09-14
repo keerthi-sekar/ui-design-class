@@ -1,0 +1,50 @@
+/* This is an empty style sheet in CSS */
+.header
+{
+   background-color: beige;
+   text-align: center;
+   padding: 20px; 
+   max-height: max-content;
+}
+
+.body 
+{
+    background-color: bisque;
+    text-align: center;
+    padding: 10px;
+}
+
+.banner
+{
+    background-color: beige;
+    text-align: left;
+    padding: 20px;
+    max-height: max-content;
+}
+
+p
+{
+    color: maroon;
+    font-style: normal;
+    font: small-caption;
+}
+
+h1
+{
+    color: black;
+    font-style: normal;
+    font: small-caption;
+}
+
+@keyframes shrink {
+    0% { height: 200px; }
+    100% { height: 150px; }
+  }
+  
+  .svg {
+    /*animation: 2s ease-in-out 0s infinite alternate shrink;*/
+    border: 1px solid #000;
+    height: 50px;
+    width: 2000px;
+    overflow: hidden;
+  }

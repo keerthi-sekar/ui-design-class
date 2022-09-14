@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My UI</title>
+    
+    <!-- The following line references an external css file -->
+    <!-- It defines style rules for your page, and elements in your page -->
+    <link href="css/style.css" rel="stylesheet">
+    
+</head>
+
+    <div class="header">
+        <h1 style="font-size: 40px"> Welcome to the Corgi Smart Fridge! </h1>
+        <p style="font-size: 20px"> Current Time: 1:53pm </p>
+    </div>
+
+<div class="body">
+    <img src="images/corgi.jpg"" alt="paris" width="200" height="200"> </img>
+
+    <p style="font-size: 20px"> Set Fridge Temperature </p>
+    <button type="button"> - </button> 
+    <output> Temperature </output>
+    <button type="button"> + </button>
+
+    <p style="font-size: 20px"> Set Freezer Temperature </p>
+    <button type="button"> - </button> 
+    <output> Temperature </output>
+    <button type="button"> + </button>
+
+    <p style="font-size: 20px"> Set Crisper Compartments Temperature </p>
+    <button type="button"> - </button> 
+    <output> Temperature </output>
+    <button type="button"> + </button>
+    <br></br>
+    <label for="fridge_contents"> View Dashboards of </label>
+    <select name="fridge_contents" id="fridge_contents">
+        <option value="fridge">Fridge</option>
+        <option value="freezer">Freezer</option>
+        <option value="crisp">Crisp Container</option>
+    </select>
+</div>
+
+<br></br>
+
+<div class="banner">
+    <image src="images/corgibutt.png" width="200" height="200">
+    <p> UI Class Tutorial</p>
+    <p> By: Keerthi Sekar</p>
+</div>
+
+    <!-- Load external JS files -->
+    <!-- This is where you will do most of the 'work' for your applications -->
+    <script src="js/main.js"></script>
+
+</html>

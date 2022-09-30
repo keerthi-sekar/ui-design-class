@@ -7,21 +7,25 @@
     <!-- The following line references an external css file -->
     <!-- It defines style rules for your page, and elements in your page -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/main.js" defer></script>
     
 </head>
 
     <div class="header">
         <h1 style="font-size: 40px"> Welcome to the Corgi Smart Fridge! </h1>
-        <p style="font-size: 20px"> Current Time: 1:53pm </p>
+        <button type="button" onclick="document.getElementById('time_stamp').innerHTML = Date()">
+        Click me to display current Date and Time.</button>
+
+        <p id="time_stamp"></p>
     </div>
 
 <div class="body">
-    <img src="images/corgi.jpg"" alt="paris" width="200" height="200"> </img>
+    <img src="images/corgi.jpg"" alt="paris" width="200" height="200" onclick="window.open(this.src)"> </img>
 
     <p style="font-size: 20px"> Set Fridge Temperature </p>
     <button type="button"> - </button> 
-    <output id="fridge_value"> Temperature </output>
-    <button type="button"> + </button>
+    <p id="fridge_value"> 0 </p>
+    <button type="button" id="fridge_button" onclick="HandleFridgeIncrement"> + </button>
 
     <p style="font-size: 20px"> Set Freezer Temperature </p>
     <button type="button"> - </button> 
@@ -42,6 +46,7 @@
 </div>
 
 <div class="banner">
+    <button type="button" id="secret_button" onclick="window.alert('Youve unlocked a hidden feature! Nice :D')"> secret </button>
     <div class="flex-container">
         <div> <image src="images/corgibutt.png" width="200" height="200"> </image></div>
         <div> <image src="images/corgibutt.png" width="200" height="200"> </image></div>

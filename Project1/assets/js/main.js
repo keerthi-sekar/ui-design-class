@@ -35,7 +35,7 @@ var finalTotal = document.getElementById('final_total');
 var errorHandler = document.getElementById('error_handler');
 var paymentMethod = document.getElementById('payment_method');
 var payStatus = document.getElementById('pay_status');
-var Pay = document.getElementById('Pay');
+var payButton = document.getElementById('pay_button');
 
 //svg elements
 var credit = document.getElementById('credit');
@@ -55,8 +55,7 @@ applyCoupon.onclick = function(){
         finalTotal.textContent = '$54.50';
     }
 };
-
-Pay.onclick = function(){
+payButton.onclick = function(){
     switch(paymentMethod.textContent)
         {
             case 'Credit':

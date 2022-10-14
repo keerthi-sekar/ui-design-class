@@ -7,7 +7,6 @@
     <title>UX-Project1</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Footer-Clean-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 
 <body>
@@ -49,7 +48,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-xl-6" style="margin: 0px;">
-                        <h1 style="text-align: center;font-size: 26px;">Coupons</h1>
+                        <h1 style="text-align: center;font-size: 26px;">Available Coupons</h1>
                         <div class="carousel slide" data-ride="carousel" id="carousel-1">
                             <div class="carousel-inner">
                                 <div class="carousel-item active"><img class="w-100 d-block" src="assets/img/coupon1.png" alt="Slide Image"></div>
@@ -71,27 +70,25 @@
                         <p><strong><span style="color: rgb(41, 94, 147);">Coupons Applied</span></strong></p>
                         <p id="coupon_list">&nbsp;&nbsp;</p>
                         <p><strong><span style="color: rgb(51, 102, 47);">New Total!</span></strong></p>
-                        <p id="final_total">$</p>
+                        <p id="final_total">$</p><button class="btn btn-outline-primary btn-sm active font-weight-normal text-center border-primary d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" id="pay_button" type="button" style="transform: translate(-222px) translateX(215px) translateY(21px);border-radius: 15px;border-top-left-radius: 15 px;border-top-right-radius: 15 px;border-bottom-right-radius: 15 px;border-bottom-left-radius: 15 px;width: 175px;border-width: 10px;border-style: solid;text-align: center;font-size: 19px;height: 42px;" onclick="PayButton()">Pay Now</button>
                     </div>
                     <div class="col-xl-11" style="transform: translateX(21px) translateY(21px);">
                         <p style="transform: translateY(-101px);width: 159px;">Enter Coupon Code:</p><input type="text" id="coupon_code" style="transform: translateX(-4px) translateY(-101px);">
-                        <p id="error_handler" style="transform: translateY(-101px);width: 159px;">&nbsp;</p><button onclick="ApplyCoupon()" id="set_coupon" class="btn btn-outline-primary btn-lg active font-weight-light text-center border-primary d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" type="button" style="transform: translate(0px) translateX(-28px) translateY(-125px);border-radius: 15px;border-top-left-radius: 15px;border-top-right-radius: 15 px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;width: 155px;border-width: 10px;border-style: solid;text-align: center;height: 31px;margin: 28px;padding: 14px 16px;font-size: 17px;" data-target="cart.html">Apply Coupon</button>
+                        <p id="error_handler" style="transform: translateY(-101px);width: 159px;">&nbsp;</p><button class="btn btn-outline-primary btn-sm active font-weight-normal text-center border-primary d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" id="apply_coupon" type="button" style="transform: translate(-222px) translateX(215px) translateY(-101px);border-radius: 15px;border-top-left-radius: 15 px;border-top-right-radius: 15 px;border-bottom-right-radius: 15 px;border-bottom-left-radius: 15 px;width: 175px;border-width: 10px;border-style: solid;text-align: center;font-size: 19px;height: 42px;" onclick="ApplyCoupon()">Apply Coupon</button>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xl-12"><button class="btn btn-outline-primary btn-lg active font-weight-light text-center border-primary d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" id="pay_button" type="button" style="transform: translate(0px) translateX(264px) translateY(-198px);border-radius: 15px;border-top-left-radius: 15px;border-top-right-radius: 15 px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;width: 155px;border-width: 10px;border-style: solid;text-align: center;height: 31px;margin: 28px;padding: 14px 16px;font-size: 17px;">Pay</button></div>
-                </div>
             </div>
+            <div class="col"></div>
             <div class="col-md-6 col-xl-4" id="secondary_device" style="width: 223px;height: 537px;background: rgba(162,162,162,0.6);border-radius: 30px;border: 10px solid rgb(0,0,0);">
                 <h1 style="font-size: 27px;text-align: center;transform: translateY(10px);">Secondary Device</h1>
                 <p style="text-align: center;margin: 0px;padding: 6px;">(1) List (2) Navigation <strong><span style="text-decoration: underline;">(3) Cart</span></strong></p>
-                <p style="text-align: center;margin: 0px;padding: 6px;">Select Payment Option Below:</p><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-credit-card" id="credit" style="font-size: 97px;padding-top: 25px;position: relative;">
+                <p style="text-align: center;margin: 0px;padding: 6px;">Select Payment Option Below:</p><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-credit-card" id="credit" style="font-size: 97px;padding-top: 25px;position: relative;" onclick="CreditChoice()">
                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"></path>
                     <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"></path>
-                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cash-stack" id="cash" style="font-size: 76px;width: 97px;height: 97px;margin-left: 15px;padding-top: 25px;">
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cash-stack" id="cash" style="font-size: 76px;width: 97px;height: 97px;margin-left: 15px;padding-top: 25px;" onclick="CashChoice()">
                     <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
                     <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z"></path>
-                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-paypal" id="paypal" style="width: 97px;height: 97px;margin-left: 15px;font-size: 1px;padding-top: 25px;">
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-paypal" id="paypal" style="width: 97px;height: 97px;margin-left: 15px;font-size: 1px;padding-top: 25px;" onclick="PayPalChoice()">
                     <path fill-rule="evenodd" d="M14.06 3.713c.12-1.071-.093-1.832-.702-2.526C12.628.356 11.312 0 9.626 0H4.734a.7.7 0 0 0-.691.59L2.005 13.509a.42.42 0 0 0 .415.486h2.756l-.202 1.28a.628.628 0 0 0 .62.726H8.14c.429 0 .793-.31.862-.731l.025-.13.48-3.043.03-.164.001-.007a.351.351 0 0 1 .348-.297h.38c1.266 0 2.425-.256 3.345-.91.379-.27.712-.603.993-1.005a4.942 4.942 0 0 0 .88-2.195c.242-1.246.13-2.356-.57-3.154a2.687 2.687 0 0 0-.76-.59l-.094-.061zM6.543 8.82l-.845 5.213v.001l-.208 1.32c-.01.066.04.123.105.123H8.14c.173 0 .32-.125.348-.296v-.005l.026-.129.48-3.043.03-.164a.873.873 0 0 1 .862-.734h.38c1.201 0 2.24-.244 3.043-.815.797-.567 1.39-1.477 1.663-2.874.229-1.175.096-2.087-.45-2.71a2.126 2.126 0 0 0-.548-.438l-.003.016c-.645 3.312-2.853 4.456-5.672 4.456H6.864a.695.695 0 0 0-.321.079z"></path>
                 </svg>
                 <p style="text-align: center;margin: 0px;padding: 6px;">Payment Method Selected:</p>
@@ -102,7 +99,6 @@
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

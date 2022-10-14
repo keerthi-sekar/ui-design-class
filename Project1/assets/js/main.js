@@ -17,7 +17,7 @@ var verify = document.getElementById('status_button');
 var statusCheck = document.getElementById('status_check');
 var transferList = document.getElementById('transfer_list');
 
-verify.onclick = function(){
+function StatusButtonClick(){
     //making assumption that all items are in stock in list for concept
     item1.textContent = input1.value + ' - In Stock';
     item2.textContent = input2.value + ' - In Stock';
@@ -26,9 +26,17 @@ verify.onclick = function(){
     status_check.textContent = 'Status: Checked';
 }
 
+//Navigation Page
+var table = document.getElementById('table1');
+var check1 = document.getElementById('check1button');
+var checkIce = document.getElementById('check1_text');
+var check2 = document.getElementById('check2');
+var check3 = document.getElementById('check3');
+var check4 = document.getElementById('check4');
+
 //Shopping Cart Page
 var p = document.getElementById('coupon_list');
-var applyCoupon = document.getElementById('set_coupon');
+var applyCoupon = document.getElementById('apply_coupon');
 var txt = document.getElementById('coupon_code');
 var preTotal = document.getElementById('total_value'); 
 var finalTotal = document.getElementById('final_total');
@@ -42,7 +50,8 @@ var credit = document.getElementById('credit');
 var cash = document.getElementById('cash');
 var paypal = document.getElementById('paypal');
 
-applyCoupon.onclick = function(){
+function ApplyCoupon(){
+    console.log("clicked apply coupon");
     if(txt.value != 'HAD22')
     {
         errorHandler.textContent = 'Error: Item Not In Cart';
@@ -55,7 +64,8 @@ applyCoupon.onclick = function(){
         finalTotal.textContent = '$54.50';
     }
 };
-payButton.onclick = function(){
+function PayButton(){
+    console.log("clicked pay coupon");
     switch(paymentMethod.textContent)
         {
             case 'Credit':
@@ -75,15 +85,15 @@ payButton.onclick = function(){
         }
 }
 
-credit.onclick = function()
+function CreditChoice()
 {
     paymentMethod.textContent = 'Credit';
 }
-cash.onclick = function()
+function CashChoice()
 {
     paymentMethod.textContent = 'Cash';
 }
-paypal.onclick = function()
+function PayPalChoice()
 {
     paymentMethod.textContent = 'PayPal';
 }

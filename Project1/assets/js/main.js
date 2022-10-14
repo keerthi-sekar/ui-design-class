@@ -35,6 +35,7 @@ var finalTotal = document.getElementById('final_total');
 var errorHandler = document.getElementById('error_handler');
 var paymentMethod = document.getElementById('payment_method');
 var payStatus = document.getElementById('pay_status');
+var Pay = document.getElementById('Pay');
 
 //svg elements
 var credit = document.getElementById('credit');

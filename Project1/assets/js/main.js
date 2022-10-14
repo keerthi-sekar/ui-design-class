@@ -15,8 +15,8 @@ var item4 = document.getElementById('4');
 var verify = document.getElementById('status_button');
 var statusCheck = document.getElementById('status_check');
 var transferList = document.getElementById('transfer_list');
+var placeholderText = document.getElementById('placeholder');
 const input = document.querySelector('file_input');
-const shoppingList = [item1, item2, item3, item4];
 
 function StatusButtonClick(){
     var parsed1 = input1.value.toLowerCase();
@@ -64,13 +64,29 @@ function StatusButtonClick(){
     status_check.textContent = 'Status: Checked';
 }
 
+function TriggerPlaceholder(){
+    placeholderText.textContent = "Placeholder triggered! Sending imaginary list...";
+}
+
 //Navigation Page
-var table = document.getElementById('table1');
-var check1 = document.getElementById('check1button');
-var checkIce = document.getElementById('check1_text');
-var check2 = document.getElementById('check2');
-var check3 = document.getElementById('check3');
-var check4 = document.getElementById('check4');
+var image1 = document.getElementById('image1');
+var image2 = document.getElementById('image2');
+var image3 = document.getElementById('image3');
+var image4 = document.getElementById('image4');
+
+
+function ChangeColor(imageNumber){
+    if(imageNumber.style.borderColor == "black")
+    {
+        imageNumber.style.borderColor = "green";
+    }
+    else
+    {
+        imageNumber.style.borderColor = "black";
+    }
+    
+}
+
 
 //Shopping Cart Page
 var p = document.getElementById('coupon_list');
@@ -107,15 +123,15 @@ function PayButton(){
     switch(paymentMethod.textContent)
         {
             case 'Credit':
-                payStatus.textContent = "Transaction Complete!";
+                payStatus.textContent = "Transaction Complete! :) Leave Cart at Checkout.";
                 alert("Thank you for using Smart Cart! Have a good day!");
                 break;
             case 'Cash':
-                payStatus.textContent = "Transaction Complete!";
+                payStatus.textContent = "Transaction Complete!:) /n Leave Cart at Checkout.";
                 alert("Thank you for using Smart Cart! Have a good day!");
                 break;
             case 'PayPal':
-                payStatus.textContent = "Transaction Complete!";
+                payStatus.textContent = "Transaction Complete! :) /n Leave Cart at Checkout.";
                 alert("Thank you for using Smart Cart! Have a good day!");
                 break;
             default:

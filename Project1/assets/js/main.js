@@ -65,7 +65,7 @@ function StatusButtonClick(){
 }
 
 function TriggerPlaceholder(){
-    placeholderText.textContent = "Placeholder triggered! Sending imaginary list...";
+    placeholderText.textContent = "Placeholder triggered! Sending imaginary items to list...";
 }
 
 //Navigation Page
@@ -127,11 +127,11 @@ function PayButton(){
                 alert("Thank you for using Smart Cart! Have a good day!");
                 break;
             case 'Cash':
-                payStatus.textContent = "Transaction Complete!:) /n Leave Cart at Checkout.";
+                payStatus.textContent = "Transaction Complete!:) Leave Cart at Checkout.";
                 alert("Thank you for using Smart Cart! Have a good day!");
                 break;
             case 'PayPal':
-                payStatus.textContent = "Transaction Complete! :) /n Leave Cart at Checkout.";
+                payStatus.textContent = "Transaction Complete! :) Leave Cart at Checkout.";
                 alert("Thank you for using Smart Cart! Have a good day!");
                 break;
             default:
